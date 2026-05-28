@@ -2,6 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import useLocalStorage from "./use-local-storage";
 
+
 const TodoList = () => {
   const [newTodo, setNewTodo] = useState("");
   const [todos, setTodos] = useLocalStorage("todolist", []);
@@ -44,6 +45,7 @@ const TodoList = () => {
               onChange={() => handleToggleTodo(todo)}
             />
             {todo.text}
+            {/* <button>Remove</button> */}
           </li>
         ))}
       </ul>
